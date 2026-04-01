@@ -38,6 +38,9 @@ consistent documentation. Each problem is intended to read like a reusable study
 
 - [Problem 0001](docs/problems/0001.md)
 - [Problem 0002](docs/problems/0002.md)
+- [Problem 0003](docs/problems/0003.md)
+- [Problem 0004](docs/problems/0004.md)
+- [Problem 0005](docs/problems/0005.md)
 
 ## Build
 
