@@ -1,5 +1,7 @@
 # project_euler_cpp
 
+[![CI](https://github.com/283586450/project_euler_cpp/actions/workflows/ci.yml/badge.svg)](https://github.com/283586450/project_euler_cpp/actions/workflows/ci.yml)
+
 `project_euler_cpp` is a modern C++23 Project Euler solution repository aimed at learners.
 
 The project focuses on high-quality implementations, clear mathematical reasoning, and
@@ -64,4 +66,3 @@ Release builds use the matching `release` preset.
 ## License
 
 This project is released under the MIT License. See [LICENSE](LICENSE).
-
