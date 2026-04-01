@@ -34,6 +34,11 @@ consistent documentation. Each problem is intended to read like a reusable study
 - `assets/` diagrams and other supporting media
 - `cmake/` reusable CMake helpers
 
+## Implemented Problems
+
+- [Problem 0001](docs/problems/0001.md)
+- [Problem 0002](docs/problems/0002.md)
+
 ## Build
 
 Configure:
