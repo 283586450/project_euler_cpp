@@ -13,7 +13,7 @@ std::vector<std::uint32_t> primes_up_to(std::uint32_t limit) {
   sieve[1] = 0;
 
   for (std::uint32_t prime = 2; prime <= limit / prime; ++prime) {
-    if (!sieve[prime]) {
+    if (sieve[prime] == 0) {
       continue;
     }
     for (std::uint32_t multiple = prime * prime; multiple <= limit; multiple += prime) {
@@ -23,14 +23,15 @@ std::vector<std::uint32_t> primes_up_to(std::uint32_t limit) {
 
   std::vector<std::uint32_t> primes;
   for (std::uint32_t value = 2; value <= limit; ++value) {
-    if (sieve[value]) {
+    if (sieve[value] != 0) {
       primes.push_back(value);
     }
   }
   return primes;
 }
 
-std::array<std::uint32_t, 25> factor_signature(std::uint32_t base, const std::vector<std::uint32_t> &primes) {
+std::array<std::uint32_t, 25> factor_signature(std::uint32_t base,
+                                               const std::vector<std::uint32_t> &primes) {
   std::array<std::uint32_t, 25> exponents{};
   for (std::size_t index = 0; index < primes.size(); ++index) {
     const std::uint32_t prime = primes[index];

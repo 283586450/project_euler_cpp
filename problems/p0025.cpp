@@ -1,5 +1,5 @@
-#include <cstdint>
 #include <algorithm>
+#include <cstdint>
 #include <iostream>
 #include <string>
 
@@ -27,7 +27,7 @@ std::string add_big_integers(const std::string &lhs, const std::string &rhs) {
     carry /= 10;
   }
 
-  std::reverse(result.begin(), result.end());
+  std::ranges::reverse(result);
   return result;
 }
 

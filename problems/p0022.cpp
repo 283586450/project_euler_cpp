@@ -6,7 +6,6 @@
 #include <iterator>
 #include <stdexcept>
 #include <string>
-#include <string_view>
 #include <vector>
 
 namespace {
@@ -21,26 +20,24 @@ std::uint64_t name_scores_sum() {
   const std::string content{std::istreambuf_iterator<char>(file), std::istreambuf_iterator<char>()};
   std::vector<std::string> names;
 
-  std::string_view view(content);
-  if (!view.empty() && view.front() == '"') {
-    view.remove_prefix(1);
-  }
-  if (!view.empty() && view.back() == '"') {
-    view.remove_suffix(1);
-  }
-
-  while (!view.empty()) {
-    const std::size_t separator = view.find("\",\"");
-    if (separator == std::string_view::npos) {
-      names.emplace_back(view);
-      break;
+  std::string current;
+  bool in_name = false;
+  for (const char ch : content) {
+    if (ch == '"') {
+      if (in_name) {
+        names.push_back(current);
+        current.clear();
+      }
+      in_name = !in_name;
+      continue;
     }
 
-    names.emplace_back(view.substr(0, separator));
-    view.remove_prefix(separator + 3);
+    if (in_name) {
+      current.push_back(ch);
+    }
   }
 
-  std::sort(names.begin(), names.end());
+  std::ranges::sort(names);
 
   std::uint64_t total = 0;
   for (std::size_t index = 0; index < names.size(); ++index) {

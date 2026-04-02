@@ -46,7 +46,7 @@ std::uint64_t non_abundant_sums(std::uint32_t limit) noexcept {
 
   std::uint64_t total = 0;
   for (std::uint32_t value = 1; value <= limit; ++value) {
-    if (!can_be_written[value]) {
+    if (can_be_written[value] == 0) {
       total += value;
     }
   }

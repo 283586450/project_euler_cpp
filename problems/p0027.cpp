@@ -10,7 +10,7 @@ std::vector<std::uint32_t> primes_up_to(std::uint32_t limit) {
   sieve[1] = 0;
 
   for (std::uint32_t prime = 2; prime <= limit / prime; ++prime) {
-    if (!sieve[prime]) {
+    if (sieve[prime] == 0) {
       continue;
     }
 
@@ -21,7 +21,7 @@ std::vector<std::uint32_t> primes_up_to(std::uint32_t limit) {
 
   std::vector<std::uint32_t> primes;
   for (std::uint32_t value = 2; value <= limit; ++value) {
-    if (sieve[value]) {
+    if (sieve[value] != 0) {
       primes.push_back(value);
     }
   }
@@ -38,8 +38,9 @@ bool is_prime(std::int64_t value, const std::vector<std::uint32_t> &primes) {
     if (prime_sq > value) {
       break;
     }
-    if ((value % prime) == 0) {
-      return value == static_cast<std::int64_t>(prime);
+    const std::int64_t prime_value = static_cast<std::int64_t>(prime);
+    if ((value % prime_value) == 0) {
+      return value == prime_value;
     }
   }
 
@@ -59,8 +60,8 @@ std::int32_t best_quadratic_primes_product() {
     for (std::int32_t a = -999; a < 1000; ++a) {
       std::int32_t length = 0;
       for (;; ++length) {
-        const std::int64_t value = static_cast<std::int64_t>(length) * length +
-                                   static_cast<std::int64_t>(a) * length + b;
+        const std::int64_t value = (static_cast<std::int64_t>(length) * length) +
+                                   (static_cast<std::int64_t>(a) * length) + b;
         if (!is_prime(value, primes)) {
           break;
         }
