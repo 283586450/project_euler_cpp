@@ -1,47 +1,49 @@
-# Problem Write-ups
+# 题解索引
 
-Each problem write-up should live in this directory and follow the same structure:
+每道题的题解都放在这个目录下，并尽量保持统一结构：
 
-- problem summary
-- key observation
-- primary solution
-- alternate approaches
-- implementation notes
-- complexity
-- verification
-- diagram references
+- 问题概述
+- 核心思路
+- 主方案
+- 其他方法
+- 实现说明
+- 复杂度
+- 验证
+- 图示说明
 
-If a problem needs images, place them in `assets/problems/<problem-id>/` and reference them from the matching markdown file.
+如果题目需要图片，请放到 `assets/problems/<problem-id>/`，并在对应 Markdown 文件中引用。
 
-## Current Index
+## 当前索引
 
-- [Problem 0001](0001.md)
-- [Problem 0002](0002.md)
-- [Problem 0003](0003.md)
-- [Problem 0004](0004.md)
-- [Problem 0005](0005.md)
-- [Problem 0006](0006.md)
-- [Problem 0007](0007.md)
-- [Problem 0008](0008.md)
-- [Problem 0009](0009.md)
-- [Problem 0010](0010.md)
-- [Problem 0011](0011.md)
-- [Problem 0012](0012.md)
-- [Problem 0013](0013.md)
-- [Problem 0014](0014.md)
-- [Problem 0015](0015.md)
-- [Problem 0016](0016.md)
-- [Problem 0017](0017.md)
-- [Problem 0018](0018.md)
-- [Problem 0019](0019.md)
-- [Problem 0020](0020.md)
-- [Problem 0021](0021.md)
-- [Problem 0022](0022.md)
-- [Problem 0023](0023.md)
-- [Problem 0024](0024.md)
-- [Problem 0025](0025.md)
-- [Problem 0026](0026.md)
-- [Problem 0027](0027.md)
-- [Problem 0028](0028.md)
-- [Problem 0029](0029.md)
-- [Problem 0030](0030.md)
+| 题号 | 标题 | 文档 |
+| --- | --- | --- |
+| 0001 | 3 和 5 的倍数 | [0001.md](0001.md) |
+| 0002 | 偶数斐波那契数 | [0002.md](0002.md) |
+| 0003 | 最大质因数 | [0003.md](0003.md) |
+| 0004 | 最大回文积 | [0004.md](0004.md) |
+| 0005 | 最小公倍数 | [0005.md](0005.md) |
+| 0006 | 平方和与和平方差 | [0006.md](0006.md) |
+| 0007 | 第 10001 个质数 | [0007.md](0007.md) |
+| 0008 | 连续数字的最大乘积 | [0008.md](0008.md) |
+| 0009 | 特殊勾股三元组 | [0009.md](0009.md) |
+| 0010 | 质数求和 | [0010.md](0010.md) |
+| 0011 | 网格中的最大乘积 | [0011.md](0011.md) |
+| 0012 | 高度可分三角数 | [0012.md](0012.md) |
+| 0013 | 大数求和 | [0013.md](0013.md) |
+| 0014 | 最长考拉兹序列 | [0014.md](0014.md) |
+| 0015 | 格点路径 | [0015.md](0015.md) |
+| 0016 | 幂的数字和 | [0016.md](0016.md) |
+| 0017 | 数字字母计数 | [0017.md](0017.md) |
+| 0018 | 最大路径和 I | [0018.md](0018.md) |
+| 0019 | 统计星期日 | [0019.md](0019.md) |
+| 0020 | 阶乘数字和 | [0020.md](0020.md) |
+| 0021 | 亲和数 | [0021.md](0021.md) |
+| 0022 | 名字分数 | [0022.md](0022.md) |
+| 0023 | 非过剩数之和 | [0023.md](0023.md) |
+| 0024 | 字典序排列 | [0024.md](0024.md) |
+| 0025 | 千位斐波那契数 | [0025.md](0025.md) |
+| 0026 | 乘法逆循环节 | [0026.md](0026.md) |
+| 0027 | 二次素数 | [0027.md](0027.md) |
+| 0028 | 数字螺旋对角线 | [0028.md](0028.md) |
+| 0029 | 不同的幂 | [0029.md](0029.md) |
+| 0030 | 五次数字幂 | [0030.md](0030.md) |

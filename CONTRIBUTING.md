@@ -1,47 +1,46 @@
-# Contributing
+# 贡献指南
 
-Thanks for helping improve `project_euler_cpp`.
+感谢你帮助改进 `project_euler_cpp`。
 
-## What This Repository Optimizes For
+## 仓库关注点
 
-- Clear mathematical explanations
-- One primary solution per problem
-- Small reusable helpers when they genuinely improve multiple problems
-- Cross-platform builds and tests
-- Documentation that stays easy to read in Chinese by default
+- 清晰的数学说明
+- 每题一个主方案
+- 只有在真正能复用时才抽公共 helper
+- 跨平台构建与测试
+- 默认使用中文、且容易阅读的文档
 
-## Before Opening a PR
+## 提交 PR 之前
 
-- Prefer small, focused changes.
-- Keep the existing C++23 baseline and warning settings in mind.
-- Add or update tests when behavior changes.
-- Update the matching problem write-up when a problem implementation changes.
-- Run the relevant build and test presets locally.
+- 尽量保持改动小而集中。
+- 注意当前 C++23 基线和警告设置。
+- 行为变化时补充或更新测试。
+- 修改题目实现时，同步更新对应题解。
+- 本地先跑相关的构建和测试 preset。
 
-## Adding a New Problem
+## 添加新题
 
-1. Copy `problems/problem_template.cpp` into a new zero-padded file such as `problems/p0006.cpp`.
-2. Register the file in `problems/CMakeLists.txt` with `project_euler_add_problem(...)`.
-3. Add the write-up in `docs/problems/`.
-4. Add or update tests if the problem introduces reusable logic.
-5. If the problem needs supporting images, place them under `assets/problems/<problem-id>/`.
+1. 将 `problems/problem_template.cpp` 复制为新的零填充文件，例如 `problems/p0006.cpp`。
+2. 在 `problems/CMakeLists.txt` 中使用 `project_euler_add_problem(...)` 注册。
+3. 在 `docs/problems/` 中补写题解。
+4. 如果这道题引入了可复用逻辑，再补或更新测试。
+5. 如果需要图片，把素材放到 `assets/problems/<problem-id>/` 下。
 
-## Code Style
+## 代码风格
 
-- Follow the existing formatting and naming conventions.
-- Prefer `constexpr` and `noexcept` when they accurately describe the code.
-- Keep helper functions small and local when the logic is only used once.
-- Avoid introducing extra abstraction unless it simplifies multiple problem solutions.
+- 遵循现有的格式与命名习惯。
+- 只在语义准确时使用 `constexpr` 和 `noexcept`。
+- 仅使用一次的逻辑尽量保持局部、小而清晰。
+- 除非能明显简化多道题的实现，否则不要额外抽象。
 
-## Review Checklist
+## 审查清单
 
-- Build passes on the supported platforms.
-- Tests pass.
-- Problem output matches the known answer.
-- Documentation explains the reasoning, not just the final formula.
+- 支持的平台都能正常构建。
+- 测试全部通过。
+- 题目输出与已知答案一致。
+- 文档解释的是推导过程，不只是最终公式。
 
-## Commit Messages
+## 提交信息
 
-- Use short, descriptive commit messages.
-- Mention the problem number when the change is problem-specific.
-
+- 使用简短、明确的提交信息。
+- 如果是单题相关改动，最好带上题号。

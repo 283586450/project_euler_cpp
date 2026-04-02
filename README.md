@@ -2,108 +2,84 @@
 
 [![CI](https://github.com/283586450/project_euler_cpp/actions/workflows/ci.yml/badge.svg)](https://github.com/283586450/project_euler_cpp/actions/workflows/ci.yml)
 
-`project_euler_cpp` is a modern C++23 Project Euler solution repository aimed at learners.
+`project_euler_cpp` 是一个面向学习者的现代 C++23 Project Euler 解题仓库。
 
-The project focuses on high-quality implementations, clear mathematical reasoning, and
-consistent documentation. Each problem is intended to read like a reusable study note:
+本项目强调三件事：
 
-- problem introduction
-- core idea and derivation
-- one best-practice primary solution
-- short notes on alternate approaches
-- modern C++ implementation
-- complexity analysis
-- supporting diagrams or visual notes when useful
+- 可靠的实现
+- 清晰的数学推导
+- 持续一致的中文文档
 
-## Principles
+每道题都尽量写成一页可复用的学习笔记：
 
-- Prefer quality over raw solution count
-- Keep one primary solution per problem
-- Add brief comparisons for alternate approaches when they exist
-- Follow modern C++ best practices from C++11 through C++23, with C++23 as the build baseline
-- Keep the repository readable, maintainable, and easy to extend
-- Write documentation in Chinese by default
+- 问题概述
+- 核心思路与推导
+- 一个主方案
+- 简短的其他思路
+- 现代 C++ 实现要点
+- 复杂度分析
+- 必要时补充图示或注记
 
-## Repository Layout
+## 原则
 
-- `include/` shared public headers
-- `src/` shared implementation code
-- `problems/` one executable per Euler problem
-- `tests/` lightweight smoke tests for the reusable core
-- `docs/` problem write-ups and templates
-- `assets/` diagrams and other supporting media
-- `cmake/` reusable CMake helpers
+- 重质量，不重题量
+- 每题保留一个主方案
+- 有其他可行方案时，简要说明取舍
+- 以 C++23 为构建基线，遵循现代 C++ 最佳实践
+- 保持仓库可读、可维护、可扩展
+- 默认使用中文撰写说明文档
 
-## Contributing
+## 仓库结构
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for the contribution workflow, style expectations, and problem submission checklist.
+- `include/`：共享公共头文件
+- `src/`：共享实现代码
+- `problems/`：每道 Euler 题一个可执行程序
+- `tests/`：公共核心的轻量回归测试
+- `docs/`：题解正文与模板
+- `assets/`：图示和辅助素材
+- `cmake/`：可复用的 CMake 辅助模块
 
-If you want to report a bug or request a new topic, use the GitHub issue templates in `.github/ISSUE_TEMPLATE/`.
+## 题目索引
 
-## Implemented Problems
+题目正文请统一查看 [docs/problems/README.md](docs/problems/README.md)，这里不再重复维护完整列表。
 
-- [Problem 0001](docs/problems/0001.md)
-- [Problem 0002](docs/problems/0002.md)
-- [Problem 0003](docs/problems/0003.md)
-- [Problem 0004](docs/problems/0004.md)
-- [Problem 0005](docs/problems/0005.md)
-- [Problem 0006](docs/problems/0006.md)
-- [Problem 0007](docs/problems/0007.md)
-- [Problem 0008](docs/problems/0008.md)
-- [Problem 0009](docs/problems/0009.md)
-- [Problem 0010](docs/problems/0010.md)
-- [Problem 0011](docs/problems/0011.md)
-- [Problem 0012](docs/problems/0012.md)
-- [Problem 0013](docs/problems/0013.md)
-- [Problem 0014](docs/problems/0014.md)
-- [Problem 0015](docs/problems/0015.md)
-- [Problem 0016](docs/problems/0016.md)
-- [Problem 0017](docs/problems/0017.md)
-- [Problem 0018](docs/problems/0018.md)
-- [Problem 0019](docs/problems/0019.md)
-- [Problem 0020](docs/problems/0020.md)
-- [Problem 0021](docs/problems/0021.md)
-- [Problem 0022](docs/problems/0022.md)
-- [Problem 0023](docs/problems/0023.md)
-- [Problem 0024](docs/problems/0024.md)
-- [Problem 0025](docs/problems/0025.md)
-- [Problem 0026](docs/problems/0026.md)
-- [Problem 0027](docs/problems/0027.md)
-- [Problem 0028](docs/problems/0028.md)
-- [Problem 0029](docs/problems/0029.md)
-- [Problem 0030](docs/problems/0030.md)
+## 参与贡献
 
-## Build
+见 [CONTRIBUTING.md](CONTRIBUTING.md)，里面写了贡献流程、代码风格和题目提交清单。
 
-Configure:
+如果你想提 bug 或建议新主题，可以直接使用 `.github/ISSUE_TEMPLATE/` 里的模板。
+
+## 构建
+
+配置：
 
 ```bash
 cmake --preset debug
 ```
 
-Build:
+编译：
 
 ```bash
 cmake --build --preset debug
 ```
 
-Test:
+测试：
 
 ```bash
 ctest --preset debug
 ```
 
-Release builds use the matching `release` preset.
+发布版使用对应的 `release` preset。
 
-The CI pipeline also runs `clang-format` and `clang-tidy` checks on the reusable code and problem sources.
+CI 还会对公共代码和题目源码执行 `clang-format` 与 `clang-tidy` 检查。
 
-## Adding a Problem
+## 添加新题
 
-1. Copy `problems/problem_template.cpp` to a new zero-padded file such as `problems/p0001.cpp`.
-2. Register the new file in `problems/CMakeLists.txt` with `project_euler_add_problem(...)`.
-3. Write the explanation in `docs/problems/`.
-4. Add diagrams or figures under `assets/problems/<problem-id>/` if needed.
+1. 将 `problems/problem_template.cpp` 复制为新的零填充文件，例如 `problems/p0001.cpp`。
+2. 在 `problems/CMakeLists.txt` 中使用 `project_euler_add_problem(...)` 注册。
+3. 在 `docs/problems/` 中补写题解。
+4. 如果需要图片，把素材放到 `assets/problems/<problem-id>/` 下。
 
-## License
+## 许可证
 
-This project is released under the MIT License. See [LICENSE](LICENSE).
+本项目采用 MIT License。详见 [LICENSE](LICENSE)。

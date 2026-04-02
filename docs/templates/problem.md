@@ -1,35 +1,34 @@
-# Problem XXXX: Title
+# 题目 XXXX：标题
 
-## Problem Summary
+## 问题概述
 
-- Source: Project Euler #XXXX
-- Goal: summarize the math, the algorithm, and the implementation idea in one page
+- 来源：Project Euler #XXXX
+- 目标：用一页纸讲清数学结论、算法思路和实现方式
 
-## Main Idea
+## 核心思路
 
-Describe the key observation that makes the problem tractable.
+说明让题目变得可解的关键观察。
 
-## Primary Solution
+## 主方案
 
-Explain the chosen best-practice approach and why it is preferred.
+解释最终选定的最佳方案，以及它为什么更合适。
 
-## Alternate Approaches
+## 其他方法
 
-Briefly list other valid approaches and when they are useful.
+简要列出其他可行方案，以及它们更适合什么场景。
 
-## Implementation Notes
+## 实现说明
 
-Document any C++23-specific choices, helper functions, or edge cases.
+记录 C++23 相关写法、公共 helper 或边界处理。
 
-## Complexity
+## 复杂度
 
-State time and space complexity.
+说明时间复杂度和空间复杂度。
 
-## Verification
+## 验证
 
-Describe the checks or sample cases used to validate the solution.
+记录用于验证答案的检查项或样例。
 
-## Diagram Notes
+## 图示说明
 
-Add references to figures or images stored under `assets/problems/<problem-id>/`.
-
+如果有图，请引用 `assets/problems/<problem-id>/` 下的文件。
