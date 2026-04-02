@@ -4,9 +4,8 @@ TabWidth: 2
 UseTab: Never
 ColumnLimit: 100
 SortIncludes: true
-Standard: c++23
+Standard: Latest
 BreakBeforeBraces: Attach
 AllowShortFunctionsOnASingleLine: Inline
 AllowShortIfStatementsOnASingleLine: Never
-AllowShortLoopsOnASingleLine: Never
-
+AllowShortLoopsOnASingleLine: false

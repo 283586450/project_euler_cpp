@@ -1,0 +1,16 @@
+Checks: >
+  -*,
+  clang-analyzer-*,
+  bugprone-*,
+  performance-*,
+  modernize-*,
+  readability-*,
+  -bugprone-exception-escape,
+  -bugprone-infinite-loop,
+  -modernize-use-auto,
+  -modernize-use-trailing-return-type,
+  -readability-identifier-length,
+  -readability-magic-numbers
+WarningsAsErrors: '*'
+HeaderFilterRegex: '(^|[/\\])(include|src|tests|problems)([/\\]|$)'
+FormatStyle: file

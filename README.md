@@ -34,6 +34,12 @@ consistent documentation. Each problem is intended to read like a reusable study
 - `assets/` diagrams and other supporting media
 - `cmake/` reusable CMake helpers
 
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the contribution workflow, style expectations, and problem submission checklist.
+
+If you want to report a bug or request a new topic, use the GitHub issue templates in `.github/ISSUE_TEMPLATE/`.
+
 ## Implemented Problems
 
 - [Problem 0001](docs/problems/0001.md)
@@ -63,6 +69,8 @@ ctest --preset debug
 ```
 
 Release builds use the matching `release` preset.
+
+The CI pipeline also runs `clang-format` and `clang-tidy` checks on the reusable code and problem sources.
 
 ## Adding a Problem
 

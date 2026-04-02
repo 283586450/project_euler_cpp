@@ -5,7 +5,7 @@
 
 namespace {
 
-bool check(bool condition, const char* message) {
+bool check(bool condition, const char *message) {
   if (!condition) {
     std::cerr << message << '\n';
     return false;
@@ -13,7 +13,7 @@ bool check(bool condition, const char* message) {
   return true;
 }
 
-}  // namespace
+} // namespace
 
 int main() {
   using project_euler::math::digit_count;
@@ -22,15 +22,19 @@ int main() {
 
   bool ok = true;
   ok &= check(is_even(0), "0 should be even");
+  ok &= check(is_even(-2), "-2 should be even");
   ok &= check(is_even(42), "42 should be even");
+  ok &= check(!is_even(-3), "-3 should be odd");
   ok &= check(!is_even(7), "7 should be odd");
   ok &= check(digit_count(0) == 1, "digit_count(0) should be 1");
   ok &= check(digit_count(7) == 1, "digit_count(7) should be 1");
   ok &= check(digit_count(42) == 2, "digit_count(42) should be 2");
+  ok &= check(digit_count(999) == 3, "digit_count(999) should be 3");
   ok &= check(digit_count(1000) == 4, "digit_count(1000) should be 4");
   ok &= check(digit_sum(0) == 0, "digit_sum(0) should be 0");
+  ok &= check(digit_sum(10) == 1, "digit_sum(10) should be 1");
   ok &= check(digit_sum(12345) == 15, "digit_sum(12345) should be 15");
+  ok &= check(digit_sum(9876543210ULL) == 45, "digit_sum(9876543210) should be 45");
 
   return ok ? 0 : 1;
 }
-
