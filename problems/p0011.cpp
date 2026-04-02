@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <array>
 #include <cstdint>
 #include <iostream>
@@ -65,36 +66,28 @@ std::uint64_t greatest_product() noexcept {
   for (std::size_t row = 0; row < 20; ++row) {
     for (std::size_t col = 0; col + 3 < 20; ++col) {
       const std::uint64_t horizontal = product_right(row, col);
-      if (horizontal > best) {
-        best = horizontal;
-      }
+      best = std::max(best, horizontal);
     }
   }
 
   for (std::size_t row = 0; row + 3 < 20; ++row) {
     for (std::size_t col = 0; col < 20; ++col) {
       const std::uint64_t vertical = product_down(row, col);
-      if (vertical > best) {
-        best = vertical;
-      }
+      best = std::max(best, vertical);
     }
   }
 
   for (std::size_t row = 0; row + 3 < 20; ++row) {
     for (std::size_t col = 0; col + 3 < 20; ++col) {
       const std::uint64_t diagonal = product_down_right(row, col);
-      if (diagonal > best) {
-        best = diagonal;
-      }
+      best = std::max(best, diagonal);
     }
   }
 
   for (std::size_t row = 0; row + 3 < 20; ++row) {
     for (std::size_t col = 3; col < 20; ++col) {
       const std::uint64_t diagonal = product_down_left(row, col);
-      if (diagonal > best) {
-        best = diagonal;
-      }
+      best = std::max(best, diagonal);
     }
   }
 

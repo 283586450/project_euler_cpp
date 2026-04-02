@@ -28,7 +28,7 @@ std::uint32_t divisor_count(std::uint64_t value) noexcept {
 }
 
 std::uint64_t first_triangle_number_with_over_500_divisors() noexcept {
-  for (std::uint64_t n = 1; ; ++n) {
+  for (std::uint64_t n = 1;; ++n) {
     const std::uint64_t triangle = (n * (n + 1)) / 2;
     const std::uint32_t divisors = (n % 2 == 0) ? divisor_count(n / 2) * divisor_count(n + 1)
                                                 : divisor_count(n) * divisor_count((n + 1) / 2);

@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <cstdint>
 #include <iostream>
 
@@ -13,9 +14,7 @@ constexpr std::uint64_t gcd(std::uint64_t lhs, std::uint64_t rhs) noexcept {
 }
 
 constexpr std::uint64_t binomial(std::uint64_t n, std::uint64_t k) noexcept {
-  if (k > n - k) {
-    k = n - k;
-  }
+  k = std::min(k, n - k);
 
   std::uint64_t result = 1;
   for (std::uint64_t i = 1; i <= k; ++i) {
@@ -28,7 +27,6 @@ constexpr std::uint64_t binomial(std::uint64_t n, std::uint64_t k) noexcept {
 
     const std::uint64_t second = gcd(result, denominator);
     result /= second;
-    denominator /= second;
 
     result *= numerator;
   }

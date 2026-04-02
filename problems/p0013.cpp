@@ -116,7 +116,8 @@ std::string leading_digits_of_sum(std::string_view input, std::size_t digits_to_
     const std::string_view line = input.substr(0, newline);
 
     for (std::size_t index = 0; index < line.size(); ++index) {
-      digits[digits.size() - 1 - index] += static_cast<std::uint32_t>(line[line.size() - 1 - index] - '0');
+      digits[digits.size() - 1 - index] +=
+          static_cast<std::uint32_t>(line[line.size() - 1 - index] - '0');
     }
 
     if (newline == std::string_view::npos) {

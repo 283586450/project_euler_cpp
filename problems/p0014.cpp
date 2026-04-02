@@ -11,7 +11,7 @@ std::uint32_t collatz_length(std::uint64_t start, std::vector<std::uint32_t> &ca
 
   while (value >= cache.size() || cache[static_cast<std::size_t>(value)] == 0) {
     path.push_back(value);
-    value = ((value % 2) == 0) ? (value / 2) : (3 * value + 1);
+    value = ((value % 2) == 0) ? (value / 2) : ((3 * value) + 1);
   }
 
   std::uint32_t length = cache[static_cast<std::size_t>(value)];

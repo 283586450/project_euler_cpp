@@ -11,7 +11,7 @@ int main() {
   while (current <= limit) {
     sum += current;
 
-    const std::uint64_t next = 4 * current + previous;
+    const std::uint64_t next = (4 * current) + previous;
     previous = current;
     current = next;
   }

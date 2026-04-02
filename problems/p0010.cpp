@@ -14,7 +14,7 @@ std::uint64_t sum_primes_below(std::size_t limit) {
   is_prime[1] = 0;
 
   for (std::size_t prime = 2; prime <= limit / prime; ++prime) {
-    if (!is_prime[prime]) {
+    if (is_prime[prime] == 0) {
       continue;
     }
 
@@ -25,7 +25,7 @@ std::uint64_t sum_primes_below(std::size_t limit) {
 
   std::uint64_t sum = 0;
   for (std::size_t value = 2; value < limit; ++value) {
-    if (is_prime[value]) {
+    if (is_prime[value] != 0) {
       sum += value;
     }
   }
