@@ -16,7 +16,7 @@ constexpr std::uint64_t lcm(std::uint64_t lhs, std::uint64_t rhs) noexcept {
   return (lhs / gcd(lhs, rhs)) * rhs;
 }
 
-}  // namespace
+} // namespace
 
 int main() {
   std::uint64_t result = 1;

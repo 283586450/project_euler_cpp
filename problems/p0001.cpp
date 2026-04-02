@@ -8,12 +8,12 @@ constexpr std::uint64_t sum_of_multiples_below(std::uint64_t limit, std::uint64_
   return factor * count * (count + 1) / 2;
 }
 
-}  // namespace
+} // namespace
 
 int main() {
   constexpr std::uint64_t limit = 1000;
-  const std::uint64_t answer = sum_of_multiples_below(limit, 3) + sum_of_multiples_below(limit, 5)
-                               - sum_of_multiples_below(limit, 15);
+  const std::uint64_t answer = sum_of_multiples_below(limit, 3) + sum_of_multiples_below(limit, 5) -
+                               sum_of_multiples_below(limit, 15);
 
   std::cout << answer << '\n';
   return 0;

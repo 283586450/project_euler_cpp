@@ -7,4 +7,3 @@ int main() {
   std::cout << "Project Euler problem template\n";
   return 0;
 }
-

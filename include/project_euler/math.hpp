@@ -12,5 +12,4 @@ namespace project_euler::math {
 
 [[nodiscard]] std::uint64_t digit_sum(std::uint64_t value) noexcept;
 
-}  // namespace project_euler::math
-
+} // namespace project_euler::math

@@ -25,7 +25,7 @@ std::uint64_t largest_prime_factor(std::uint64_t value) {
   return largest;
 }
 
-}  // namespace
+} // namespace
 
 int main() {
   constexpr std::uint64_t target = 600851475143ULL;

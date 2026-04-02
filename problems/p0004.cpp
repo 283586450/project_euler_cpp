@@ -15,7 +15,7 @@ namespace {
   return value == reversed;
 }
 
-}  // namespace
+} // namespace
 
 int main() {
   std::uint32_t best = 0;
